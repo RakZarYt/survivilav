@@ -99,8 +99,8 @@ h1, h2, h3, h4, h5, h6 {
 .page {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-  grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 20% 80%;
+  grid-template-columns: 20% 80%;
   grid-template-areas: "header header" "nav content" "footer footer"; }
 
 .header {

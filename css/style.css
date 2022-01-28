@@ -72,34 +72,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__font {
   font: 1em Montserrat;
-  font-weight: 400; }
+  font-weight: 400;
+  display: block; }
 
 .nav__heading {
   text-transform: uppercase;
   font: 1.2em Montserrat;
   font-weight: 700; }
 
-.content_font {
+.content__font {
   font: 1em Montserrat;
   font-weight: 400; }
 
-.content_heading {
+.content__heading {
   text-transform: uppercase;
   font: 1.2em Montserrat;
-  font-weight: 700; }
+  font-weight: 700;
+  text-align: center; }
 
 .content__font_aside {
   font: 0.9em Montserrat;
   font-weight: 300; }
 
 .footer__font {
-  font: 1em Montserrat;
-  font-weight: 400; }
+  font: 2.2em Montserrat;
+  font-weight: 800; }
 
 .body {
   font-size: 18px;
   background-color: #f1f1f1;
-  height: 100%; }
+  height: 100%;
+  color: #232323; }
 
 .page {
   display: -ms-grid;
@@ -130,7 +133,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   width: 100%;
   height: 100%;
-  background: #faa533; }
+  background: #faa533;
+  text-align: center; }
 
 .content {
   -ms-grid-row: 2;
@@ -143,6 +147,18 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: #f1f1f1; }
 
+.aside {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  padding: 8px;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  background: #fad033;
+  border-radius: 6px; }
+
 .footer {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
@@ -154,3 +170,31 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: #232323;
   color: #f1f1f1; }
+
+a:link {
+  color: #232323; }
+
+a:hover {
+  color: #232323; }
+
+a:active {
+  color: #232323; }
+
+a:visited {
+  color: #232323; }
+
+.content__heading {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+.content__font {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }
+
+.content__list_item {
+  margin-bottom: 4px;
+  margin-top: 4px; }
+
+.aside {
+  margin-bottom: 1rem;
+  margin-top: 1rem; }

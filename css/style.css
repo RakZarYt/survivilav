@@ -191,6 +191,11 @@ a:visited {
   margin-bottom: 1rem;
   margin-top: 1rem; }
 
+.nav__font {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  color: #f1f1f1; }
+
 .content__list_item {
   margin-bottom: 4px;
   margin-top: 4px; }
@@ -198,3 +203,35 @@ a:visited {
 .aside {
   margin-bottom: 1rem;
   margin-top: 1rem; }
+
+.content__image {
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 8px #232323;
+  box-shadow: 0px 0px 8px #232323;
+  border-radius: 8px; }
+
+@media (max-width: 480px) {
+  .page {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "nav" "content" "footer"; }
+  .header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; }
+  .nav {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1; }
+  .content {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1; }
+  .aside {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1; }
+  .footer {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1; } }

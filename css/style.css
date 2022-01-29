@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  padding: 8px;
+  padding: 16px;
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -198,7 +198,19 @@ a:visited {
 
 .content__list_item {
   margin-bottom: 4px;
-  margin-top: 4px; }
+  margin-top: 4px;
+  margin-left: 1.25rem;
+  position: relative; }
+
+.content__list_item:before {
+  content: "";
+  background: #fad033;
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  position: absolute;
+  left: -1.25rem;
+  top: 5px; }
 
 .aside {
   margin-bottom: 1rem;
@@ -233,6 +245,8 @@ a:visited {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-template-areas: "header" "nav" "content" "footer"; }
+    .page .content {
+      width: 96%; }
   .header {
     -ms-grid-row: 1;
     -ms-grid-column: 1;

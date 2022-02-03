@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
   grid-area: content;
-  padding: 16px;
+  padding: 20px;
   margin: 0 auto;
   width: 100%;
   height: auto;
@@ -194,7 +194,18 @@ a:visited {
 .nav__font {
   margin-bottom: 1rem;
   margin-top: 1rem;
-  color: #f1f1f1; }
+  color: #f1f1f1;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+.nav__font:hover {
+  background: #fad033;
+  padding: 8px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  border-radius: 6px; }
 
 .content__list_item {
   margin-bottom: 4px;
@@ -223,7 +234,7 @@ a:visited {
   border-radius: 8px; }
 
 .article {
-  margin: 32px 0 32px 0; }
+  margin: 2.75rem 0 2.5rem 0; }
 
 .article:first-child {
   margin: 1rem 0 1rem 0; }

@@ -147,9 +147,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .tabs__font_heading {
   text-transform: none;
-  font: 1.1em Montserrat;
-  font-weight: 400;
-  text-align: left;
+  font: 1.2em Montserrat;
+  font-weight: 700;
+  text-align: center;
   margin: 0;
   display: block; }
 
@@ -365,27 +365,21 @@ a:visited {
   content: url("../image/icon.png");
   margin-right: 1rem; }
 
-.tabs {
-  background: #FFD965;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .tabs__head {
   background: #fad033;
-  padding: 16px;
-  -webkit-box-flex: 20%;
-  -ms-flex: 20%;
-  flex: 20%; }
+  padding: 8px; }
 
 .tabs__body {
-  padding: 16px;
-  -webkit-box-flex: 80%;
-  -ms-flex: 80%;
-  flex: 80%; }
+  background: #99D2FF;
+  padding: 8px; }
 
-.details[open] {
-  padding: 0 0 16px 0; }
+.details {
+  margin: 8px 0; }
+
+.summary::before {
+  content: "";
+  width: 2em;
+  height: 2em; }
 
 details summary {
   display: block;

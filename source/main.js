@@ -112,23 +112,6 @@ let template = [
                 `,
             },
             {
-                "title": "Контент и новости",
-                "content": `
-                <p class="heading">Интересные изображения:</p>
-                <div class="content__table-picture">
-                    <img src="source/picture/article/content and news/home.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/spawn.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/storehouse.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/bed.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/market.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/other bed.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/rainbow.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/ship.png" alt="" class="picture picture_content">
-                    <img src="source/picture/article/content and news/title.png" alt="" class="picture picture_content">
-                </div>
-                `,
-            },
-            {
                 "title": "Обновления",
                 "content": `
                 <p class="heading">Последнее обновление проекта:</p>
@@ -152,6 +135,59 @@ let template = [
                 "content": `
                 <p class="heading">Дополнительный сервер</p>
                 <p class="text">Сурвивилав 1.14.4 - это дополнительный (более старший товарищ), здесь установлены плагины, на: приваты, базовые команды, и так далее. Нет никаких модов.</p>
+                `,
+            },
+        ],
+    },
+    {
+        "title": "Новости",
+        "article": [
+            {
+                "title": "Информация",
+                "content": `
+                <p class="heading">Новости:</p>
+                <p class="text">
+                    Желательно читать в этом порядке:
+                    <br><span class="text_yellow">Очередные будни</span> - 06.11.2023 - 07.11.2023
+                </p>
+                <p class="heading"></p>
+                <p class="text"></p>
+                `,
+            },
+            {
+                "title": "Очередные будни",
+                "content": `
+                <p class="heading">Очередные будни</p>
+                <p class="text">
+                    Недавно меня наняли, вместе с Rush_Lord'ом на строительство, нового интересного
+                    сооружения. Планы были крупные, но и зарплата порадовала! Стройка происходила в прекрасном месте:
+                    район станции метро Степановская. Спасибо Chepikpro за возможность заработать.
+                </p>
+                <p class="heading">Новая станция</p>
+                <p class="text">
+                    Была построена новая мини-станция и путь к ней. Станцию строил только я, -
+                    название "Новейшая", здесь будут проходить ивенты, мини-игры и прочие вещи.
+                    У меня есть планы на эту станцию, не переключайтесь! 
+                </p>
+                <p class="text">
+                    Теперь карта метро выглядит как-то так:
+                </p>
+                <img alt="" src="/source/picture/article/metro.png" class="picture picture_content">
+                <p class="text"><i class="i">Новость от: Roman_Voran</i></p>
+                `,
+            },
+        ],
+    },
+    {
+        "title": "Туториалы",
+        "article": [
+            {
+                "title": "О странице",
+                "content": `
+                <p class="heading">О странице</p>
+                <p class="text">
+                    Чуть позже здесь будут объяснения самых простых состовляющих майнкрафта: моды, плагины, лаунчеры и т.д.
+                </p>
                 `,
             },
         ],

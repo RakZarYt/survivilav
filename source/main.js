@@ -116,6 +116,16 @@ let template = [
                 "content": `
                 <p class="heading">Последнее обновление проекта:</p>
                 <p class="text"><b class="b">Был разработан новый веб-сайт.</b> - 06.11.2023</p>
+                <p class="text"><b class="b">
+                    У веб-сайта появился простой адаптив для телефонов. На
+                    сервере 1.16.5: 1. Теперь в табе пишутся: <часы>/<минуты> наигранные, минуты
+                    учитывают существование часов. Теперь выше 59 нельзя.
+                    2. Убраны суффиксы у всех игроков. Только мешали.
+                    3. Теперь префиксы в табе и в чате совпадают.
+                    4. Добавлен плагин ImageOnMap - на картинки в майне. Пока-что только для админов, далее посмотрим.
+                    5. Добавлены команды: /sit /lay, - для всех игроков.
+                    6. Добавлена команда /spawn, спавн временно перемещён на РВХЛ.
+                </b> - 08.11.2023</p>
                 `,
             },
         ],
@@ -148,10 +158,9 @@ let template = [
                 <p class="heading">Новости:</p>
                 <p class="text">
                     Желательно читать в этом порядке:
+                    <br><span class="text_yellow">Информация</span>
                     <br><span class="text_yellow">Очередные будни</span> - 06.11.2023 - 07.11.2023
                 </p>
-                <p class="heading"></p>
-                <p class="text"></p>
                 `,
             },
             {
@@ -190,13 +199,40 @@ let template = [
                 </p>
                 `,
             },
+            {
+                "title": "Как попасть на сервере?",
+                "content": `
+                <p class="heading">Регистрация</p>
+                <p class="text">
+                    Сурвивилав - более-менее приватный так, что для попадания сюда
+                    вам потребуется зарегистрироваться, через наш телеграм регистрации.
+                    Потом: кто-либо[игроки, модератор, администратор] проверят вашу
+                    форму и вы получите доступ или нет :P
+                    <br>
+                    <br><i class="i">Если вы по приглашению игрока, уже играющего на сервере, то
+                    можете входить на проект, без какой-либо регистрации. Тот кто пригласил
+                    должен написать администрации.</i>
+                </p>
+                `,
+            },
         ],
     },
+    
 ];
 
 let content = document.querySelector (".content");
-let navSubtitle = document.querySelector (".nav-subtitle");
+let navSubtitle = document.querySelector (".nav-subtitle__inner");
 let navTitle = document.querySelector (".nav-title");
+let popupOpenMenu = document.querySelector('#menu-open__button'); 
+
+popupOpenMenu.onclick = function (event) {
+    let popupOpenMenuElement = document.querySelector('.nav-subtitle'); 
+    if (popupOpenMenuElement.style.display === 'block') {
+        popupOpenMenuElement.style.display = 'none';
+    } else {
+        popupOpenMenuElement.style.display = 'block';
+    }
+}
 
 // Функция вывода кнопок сверху
 function viewButtonTop () {

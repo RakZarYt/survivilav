@@ -1,3 +1,11 @@
+let content = document.querySelector(".content");
+let navSubtitle = document.querySelector(".nav-subtitle__inner");
+let navTitle = document.querySelector(".nav-title");
+let popupOpenMenu = document.querySelector('#menu-open__button');
+let popupOpenMenuElement = document.querySelector('.nav-subtitle');
+let imageNews = "source/picture/article/news/"
+let image = imageNews + "metro.png"
+
 let template = [
     {
         "title": "Главная",
@@ -181,7 +189,7 @@ let template = [
                 <p class="text">
                     Теперь карта метро выглядит как-то так:
                 </p>
-                <img alt="" src="/source/picture/article/metro.png" class="picture picture_content">
+                <img alt="" src="${imageNews + "metro.png"}" class="picture picture_content">
                 <p class="text"><i class="i">Новость от: Roman_Voran</i></p>
                 `,
             },
@@ -217,25 +225,32 @@ let template = [
             },
         ],
     },
-    
+    {
+        "title": "Галерея",
+        "article": [
+            {
+                "title": "Скриншоты сервера",
+                "content": `
+                <p class="heading">Скриншоты сервера</p>
+                <img alt="" src="${imageNews + "bed.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "home.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "market.png"}" class="picture picture_content">
+
+                <img alt="" src="${imageNews + "other bed.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "ship.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "spawn.png"}" class="picture picture_content">
+
+                <img alt="" src="${imageNews + "rainbow.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "storehose.png"}" class="picture picture_content">
+                <img alt="" src="${imageNews + "title.png"}" class="picture picture_content">
+                `,
+            },
+        ],
+    },
 ];
 
-let content = document.querySelector (".content");
-let navSubtitle = document.querySelector (".nav-subtitle__inner");
-let navTitle = document.querySelector (".nav-title");
-let popupOpenMenu = document.querySelector('#menu-open__button'); 
-
-popupOpenMenu.onclick = function (event) {
-    let popupOpenMenuElement = document.querySelector('.nav-subtitle'); 
-    if (popupOpenMenuElement.style.display === 'block') {
-        popupOpenMenuElement.style.display = 'none';
-    } else {
-        popupOpenMenuElement.style.display = 'block';
-    }
-}
-
 // Функция вывода кнопок сверху
-function viewButtonTop () {
+function viewButtonTop() {
     let viewButtonTopInner = '<img src="source/picture/icon.png" alt="логотип сайта" class="picture logo">';
     for (templateElement in template) {
         viewButtonTopInner = viewButtonTopInner + `
@@ -250,14 +265,14 @@ function viewButtonTop () {
 };
 
 // Функция вывода кнопок слева
-function viewButtonLeft (value = "Главная") {
+function viewButtonLeft(value = "Главная") {
     let viewButtonLeftInner = '';
     for (templateParentElement in template) {
         if (template[templateParentElement]["title"] === value) {
             templateArticles = template[templateParentElement]["article"];
             for (templateElement in templateArticles) {
                 viewButtonLeftInner = viewButtonLeftInner + `
-                <button class="button nav-subtitle__button" onclick="viewContent ('${value}', '${templateArticles[templateElement]['title']}')">
+                <button class="button nav-subtitle__button" onclick="viewContent ('${value}', '${templateArticles[templateElement]['title']}'); hide();">
                         <p class="text">${templateArticles[templateElement]["title"]}</p>
                 </button>
                 `;
@@ -269,7 +284,7 @@ function viewButtonLeft (value = "Главная") {
     return viewButtonLeftInner;
 };
 
-function viewContent (valueTop = "Главная", valueLeft = "") {
+function viewContent(valueTop = "Главная", valueLeft = "") {
     let viewContentInner = '';
     for (templateParentElement in template) {
         if (template[templateParentElement]["title"] === valueTop) {
@@ -288,15 +303,36 @@ function viewContent (valueTop = "Главная", valueLeft = "") {
     return viewContentInner;
 }
 
-function contentClear () {
+function contentClear() {
     content.innerHTML = "";
 }
 
-function start () {
-    viewButtonTop ()
-    viewButtonLeft ("Главная")
-    viewContent ("Главная", "Основная")
-    console.log ("Готово");
+function start() {
+    viewButtonTop()
+    viewButtonLeft("Главная")
+    viewContent("Главная", "Основная")
+    console.log("Готово");
 }
 
-start ();
+start();
+
+popupOpenMenu.onclick = function (event) {
+    let popupOpenMenuElement = document.querySelector('.nav-subtitle');
+    if (popupOpenMenuElement.style.display === 'block') {
+        popupOpenMenuElement.style.display = 'none';
+    } else {
+        popupOpenMenuElement.style.display = 'block';
+    }
+}
+
+function hide() {
+    if (document.documentElement.clientWidth <= 620) {
+        popupOpenMenuElement.style.display = 'none';
+    } else {
+        popupOpenMenuElement.style.display = 'block';
+    }
+}
+
+window.addEventListener('resize', (e) => {
+    hide();
+});

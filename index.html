@@ -3,42 +3,130 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <meta name="yandex-verification" content="934b2c1d01f08aca" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,700;0,900;1,100;1,200;1,300;1,400;1,700;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Overpass:ital@0;1&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="source/picture/icon.png">
-    <link rel="stylesheet" href="source/main.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-    <title>survivilav</title>
+    <title>сервер</title>
 </head>
 
 <body class="body">
-    <div class="container">
-        <div class="nav-title">
-            <img src="source/picture/icon.png" alt="логотип сайта" class="logo">
-        </div>
 
-        <div class="nav-subtitle">
-            <div class="nav-subtitle__inner">
+    <div class="container container_pc">
 
+        <div class="container__top">
+            <div class="block_right">
+                <p class="text text_yellow" id="js-openInfoPopup">подробнее •</p>
             </div>
         </div>
 
-        <div class="content">
-            <p class="heading">Доброе утро, товарищи!</p>
+        <div class=" container__left">
+            <div class="block_image">
+                <img src="img/logo.png" alt="">
+            </div>
         </div>
-        <div class="menu-open">
-            <button class="menu__button" id="menu-open__button">
-                <img src="source/picture/button_menu.png" alt="" class="picture">
+
+        <div class="container__right">
+            <h1 class="title">SURVIVILAV</h1>
+            <h2 class="subtitle">
+                <div class="link" id="js-openInvitePopup">получить доступ •</div>
+            </h2>
+        </div>
+
+    </div>
+
+    <div class="container container_telephone">
+
+        <div class="container__top">
+            <div class="block_right">
+                <p class="text text_yellow" id="js-openInviteTelephone">подробнее</p>
+                <p class="text text_yellow" id="js-openTelephonePopup">телефонам</p>
+            </div>
+        </div>
+
+        <div class=" container__left">
+            <div class="block_image">
+                <img class="logo" src="img/logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="container__right">
+            <h1 class="title">SURVIVILAV</h1>
+            <h2 class="subtitle">
+                <div class="link link-telephone-telephone" id="js-openInfoPopupTelephone">получить доступ</div>
+            </h2>
+        </div>
+
+    </div>
+
+
+
+    <div class="popup" id="js-popupInfo">
+        <div class="popup__inner" id="js-popupInnerInfo">
+            <p class="popup__text">
+                <span class="popup__text_red">Сурвивилав</span> - это комфортный майнкрафт-проект для увлекательной
+                игры. Мы
+                предлагаем
+                два сервера для версий 1.14.4 и 1.16.5, сохраняя при этом атмосферу классического Minecraft. Нажмите
+                кнопку "Получить доступ" и присоединяйтесь к нашему дружному сообществу. Ждем тебя в мире
+                Сурвивилава!<br>
+                <br>
+                <span class="popup__text_red">rakzarvoice@gmail.com - для связи</span>
+            </p>
+            <button class="popup__footer" id="js-closeInfoPopup">
+                закрыть
             </button>
         </div>
     </div>
-    <script src="source/main.js"></script>
+
+
+
+    <div class="popup" id="js-popupInvite">
+        <div class="popup__inner" id="js-popupInnerInvite">
+            <p class="popup__text">
+                <span class="popup__text_red">Используйте телеграм,</span><br>
+                Напишите в наш специальный чат - <a class="link text_blue" href="https://t.me/+RDEAO2NJGXo2NzFi"
+                    target="_blank">https://t.me/+RDEAO2NJGXo2NzFi</a> (только для адекватных
+                людей старше 14
+                лет).
+                В этом чате модераторы сервера отделяют людей подходящих под критерии.
+                После этого, вас добавят в группу сервера (общение) и вы получите доступ к серверу или серверам.
+            </p>
+            <button class="popup__footer" id="js-closeInvitePopup">
+                закрыть
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class="popup" id="js-popupTelephone">
+        <div class="popup__inner" id="js-popupInnerTelephone">
+            <p class="popup__text">
+                <span class="popup__text_red">Для телефонов,</span><br>
+                Зайти на наш сервер с телефона возможно, но требуются костыли. В связи с этим, мы
+                просим если вы используете телефон,
+                для игры в майнкрафт, играть не на нашем проекте. <br>
+                <br>
+                <span class="popup__text_red">Для тех кто хочет играть в майнкрафт с телефона: PojavLauncher в
+                    помощь</span>
+
+            </p>
+            <button class="popup__footer" id="js-closeTelephonePopup">
+                закрыть
+            </button>
+        </div>
+    </div>
+
+    <p class="none">Последнее обновление сайта: 12.05.2024, номер обновления: 1</p>
+
+    <script src="main.js"></script>
+
 </body>
 
 </html>
